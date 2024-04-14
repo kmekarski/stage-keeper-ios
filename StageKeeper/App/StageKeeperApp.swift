@@ -18,7 +18,9 @@ struct StageKeeperApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            NavigationStack {
+                HomeView()
+            }
         }
         .environmentObject(setlistsVM)
         .environmentObject(songsVM)

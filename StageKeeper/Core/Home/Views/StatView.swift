@@ -19,7 +19,9 @@ struct StatView: View {
                 Image(systemName: icon)
             }
             Text(stat.value)
-        }    }
+        }
+        .font(.system(size: 14, weight: .semibold))
+    }
 }
 
 #Preview {

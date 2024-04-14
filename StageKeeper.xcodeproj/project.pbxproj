@@ -39,6 +39,7 @@
 		A7437CF42BCC75F100D5183C /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF32BCC75F100D5183C /* SongCardView.swift */; };
 		A7437CF62BCC767300D5183C /* InstrumentLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */; };
 		A7437CF82BCC772500D5183C /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF72BCC772500D5183C /* StatView.swift */; };
+		A7437CFD2BCC807C00D5183C /* SongDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CFC2BCC807C00D5183C /* SongDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		A7437CF32BCC75F100D5183C /* SongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
 		A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentLettersView.swift; sourceTree = "<group>"; };
 		A7437CF72BCC772500D5183C /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		A7437CFC2BCC807C00D5183C /* SongDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		A7437CA12BCA96AF00D5183C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A7437CF92BCC806300D5183C /* ViewSong */,
 				A7437CAA2BCA970A00D5183C /* ViewSetlist */,
 				A7437CA92BCA96F600D5183C /* MyBandmates */,
 				A7437CA82BCA96E100D5183C /* Perform */,
@@ -335,6 +338,22 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		A7437CF92BCC806300D5183C /* ViewSong */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CFA2BCC806A00D5183C /* Views */,
+			);
+			path = ViewSong;
+			sourceTree = "<group>";
+		};
+		A7437CFA2BCC806A00D5183C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CFC2BCC807C00D5183C /* SongDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +454,7 @@
 				A7437CDE2BCC536D00D5183C /* SongEnergy.swift in Sources */,
 				A7437CC22BCBD4EF00D5183C /* HomeSideMenuView.swift in Sources */,
 				A7437CF62BCC767300D5183C /* InstrumentLettersView.swift in Sources */,
+				A7437CFD2BCC807C00D5183C /* SongDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

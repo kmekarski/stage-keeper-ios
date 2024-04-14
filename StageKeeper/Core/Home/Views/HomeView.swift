@@ -62,7 +62,10 @@ extension HomeView {
                 switch selectedTab {
                 case .setlists:
                     ForEach(setlistsVM.setlists) {setlist in
-                        HomeItemCardView(setlist: setlist)
+                        NavigationLink {
+                            SetlistDetailsView(setlist: setlist)
+                        } label: { HomeItemCardView(setlist: setlist)
+                        }
                     }
                 case .songs:
                     ForEach(songsVM.songs) {song in

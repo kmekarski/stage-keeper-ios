@@ -15,6 +15,7 @@ struct InstrumentLettersView: View {
                     Text(instument.letter)
                 }
             }
+        .font(.system(size: 16, weight: .semibold))
         }
     }
 

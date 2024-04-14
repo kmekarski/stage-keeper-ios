@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SetlistDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var setlist: Setlist
     var body: some View {
         ZStack {
@@ -25,18 +26,22 @@ struct SetlistDetailsView: View {
             }
         }
         .padding()
-        
+        .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
-    SetlistDetailsView(setlist: setlist2)
+    NavigationStack {
+        SetlistDetailsView(setlist: setlist2)
+    }
 }
 
 extension SetlistDetailsView {
     private var appBar: some View {
         AppBar(title: setlist.name,leading: [
-            AppBarIconButtonView(action: {}, icon: "chevron.left")
+            AppBarIconButtonView(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, icon: "chevron.left")
         ], trailing: [
             AppBarIconButtonView(action: {}, icon: "pencil")
         ])

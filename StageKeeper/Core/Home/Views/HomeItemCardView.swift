@@ -76,6 +76,7 @@ struct HomeItemCardView: View {
             }
             .padding(8)
         }
+        .foregroundStyle(.black)
     }
 }
 
