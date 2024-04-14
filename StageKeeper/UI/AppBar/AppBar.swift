@@ -45,7 +45,7 @@ struct AppBar: View {
                 }
             }
         }
-        .frame(height: 50)
+        .frame(height: 75, alignment: .top)
     }
 }
 

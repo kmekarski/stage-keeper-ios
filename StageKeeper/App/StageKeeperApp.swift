@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct StageKeeperApp: App {
+    var setlistsVM: SetlistsViewModel
+    var songsVM: SongsViewModel
+    
+    init() {
+        setlistsVM = SetlistsViewModel()
+        songsVM = SongsViewModel()
+    }
     var body: some Scene {
         WindowGroup {
             HomeView()
         }
+        .environmentObject(setlistsVM)
+        .environmentObject(songsVM)
     }
 }

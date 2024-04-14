@@ -10,7 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     let options: [TabBarViewButton]
     var body: some View {
-        WideCapsuleView {
+        BorderDiagonalShadowContainer(backgroundColor: .yellow) {
             HStack(spacing: 12) {
                 ForEach(options.indices, id: \.self) { index in
                     options[index]

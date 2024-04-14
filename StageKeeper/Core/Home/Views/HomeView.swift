@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var showSideMenu = true
+    @EnvironmentObject var setlistsVM: SetlistsViewModel
+    @EnvironmentObject var songsVM: SongsViewModel
+    
+    @State var showSideMenu = false
     @State var selectedSideMenuOptionIndex = 0
-    @State var selectedTabBarOptionIndex = 0
+    @State var selectedTab: HomeTabBarOptionType = .setlists
     
     var body: some View {
         ZStack {
             ZStack {
                 VStack {
                     appBar
-                    Spacer()
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    list
                     Spacer()
                 }
                 VStack {
@@ -41,6 +43,8 @@ struct HomeView: View {
     NavigationStack {
         HomeView()
     }
+    .environmentObject(SetlistsViewModel())
+    .environmentObject(SongsViewModel())
 }
 
 extension HomeView {
@@ -52,15 +56,37 @@ extension HomeView {
         ])
     }
     
+    private var list: some View {
+        ScrollView {
+            VStack(spacing: 16) {
+                switch selectedTab {
+                case .setlists:
+                    ForEach(setlistsVM.setlists) {setlist in
+                        HomeItemCardView(setlist: setlist)
+                    }
+                case .songs:
+                    ForEach(songsVM.songs) {song in
+                        HomeItemCardView(song: song)
+                    }
+                }
+            
+            }
+            .padding(4)
+        }
+    }
+    
     private var tabBar: some View {
         TabBarView(options: tabBarOptions)
     }
     
     private var tabBarOptions: [TabBarViewButton] {
-        HomeTabBarOptionType.allCases.enumerated().map { (index, option) in
-            TabBarViewButton(text: option.title, icon: option.iconName, isSelected: selectedTabBarOptionIndex == index, action: {
-                selectedTabBarOptionIndex = index
-            })
-        }
+        [
+            TabBarViewButton(text: HomeTabBarOptionType.setlists.title, icon: HomeTabBarOptionType.setlists.iconName, isSelected: selectedTab == .setlists, action: {
+            selectedTab = .setlists
+        }),
+            TabBarViewButton(text: HomeTabBarOptionType.songs.title, icon: HomeTabBarOptionType.songs.iconName, isSelected: selectedTab == .songs, action: {
+            selectedTab = .songs
+        })
+        ]
     }
 }

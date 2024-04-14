@@ -17,7 +17,7 @@ struct WideCapsuleButton: View {
     let iconSize: CGFloat = 16
     var body: some View {
         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            WideCapsuleView(alignment: alignment, backgroundColor: backgroundColor, content: {
+            BorderDiagonalShadowContainer(alignment: alignment, backgroundColor: backgroundColor, content: {
                 HStack(spacing: 12) {
                     if let icon = icon {
                         ZStack {

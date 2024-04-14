@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct WideCapsuleView<Content: View>: View {
+struct BorderDiagonalShadowContainer<Content: View>: View {
     var alignment: Alignment = .center
-    var backgroundColor: Color = .yellow
+    var backgroundColor: Color = .white
     var content: () -> Content
     
     let cornerRadius: CGFloat = 25
@@ -28,10 +28,10 @@ struct WideCapsuleView<Content: View>: View {
 
 #Preview {
     VStack {
-        WideCapsuleView() {
+        BorderDiagonalShadowContainer() {
             Text("Hello capsule")
         }
-        WideCapsuleView(alignment: .leading) {
+        BorderDiagonalShadowContainer(alignment: .leading) {
             Text("Hello capsule")
                 .padding(.leading, 32)
         }
