@@ -13,4 +13,5 @@ struct Setlist: Identifiable {
     let songs: [Song]
     let timeInSeconds: Int
     let hasEncore: Bool
+    let notes: String
 }

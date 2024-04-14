@@ -65,11 +65,11 @@ struct HomeItemCardView: View {
             }
                 HStack(spacing: 24) {
                     ForEach(stats.indices, id: \.self) {index in
-                        stat(stats[index])
+                        StatView(stats[index])
                     }
                     if let song = song {
                         Spacer()
-                        instumentLetters()
+                        InstrumentLettersView(song: song)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -90,22 +90,4 @@ struct HomeItemCardView: View {
 }
 
 extension HomeItemCardView {
-    private func stat(_ stat: HomeItemCardStat) -> some View {
-        HStack(spacing: 6) {
-            if let icon = stat.icon {
-                Image(systemName: icon)
-            }
-            Text(stat.value)
-        }
-    }
-    
-    private func instumentLetters() ->  some View {
-        HStack {
-            if let song = song {
-                ForEach(song.instruments, id: \.self) { instument in
-                    Text(instument.letter)
-                }
-            }
-        }
-    }
 }

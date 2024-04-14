@@ -34,7 +34,9 @@ let setlist1 = Setlist(
         )
     ],
     timeInSeconds: 1227,
-    hasEncore: true
+    hasEncore: true,
+    notes: ""
+
 )
 
 let setlist2 = Setlist(
@@ -64,7 +66,8 @@ let setlist2 = Setlist(
         )
     ],
     timeInSeconds: 864,
-    hasEncore: false
+    hasEncore: false,
+    notes: "Please note that the tempo increases gradually during the second half."
 )
 
 let setlist3 = Setlist(
@@ -94,5 +97,6 @@ let setlist3 = Setlist(
         )
     ],
     timeInSeconds: 837,
-    hasEncore: true
+    hasEncore: true,
+    notes: "Please note that the tempo increases gradually during the second half. Please note that the tempo increases gradually during the second half."
 )

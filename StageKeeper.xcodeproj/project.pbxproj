@@ -33,6 +33,12 @@
 		A7437CE42BCC563A00D5183C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CE32BCC563A00D5183C /* String.swift */; };
 		A7437CE62BCC568900D5183C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CE52BCC568900D5183C /* Int.swift */; };
 		A7437CE82BCC640700D5183C /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CE72BCC640700D5183C /* SongsViewModel.swift */; };
+		A7437CED2BCC6F3400D5183C /* SetlistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CEC2BCC6F3400D5183C /* SetlistDetailsView.swift */; };
+		A7437CF02BCC734700D5183C /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CEF2BCC734700D5183C /* SectionTitle.swift */; };
+		A7437CF22BCC742800D5183C /* SmallRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF12BCC742800D5183C /* SmallRectangleButton.swift */; };
+		A7437CF42BCC75F100D5183C /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF32BCC75F100D5183C /* SongCardView.swift */; };
+		A7437CF62BCC767300D5183C /* InstrumentLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */; };
+		A7437CF82BCC772500D5183C /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF72BCC772500D5183C /* StatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,12 @@
 		A7437CE32BCC563A00D5183C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A7437CE52BCC568900D5183C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		A7437CE72BCC640700D5183C /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
+		A7437CEC2BCC6F3400D5183C /* SetlistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistDetailsView.swift; sourceTree = "<group>"; };
+		A7437CEF2BCC734700D5183C /* SectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
+		A7437CF12BCC742800D5183C /* SmallRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRectangleButton.swift; sourceTree = "<group>"; };
+		A7437CF32BCC75F100D5183C /* SongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
+		A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentLettersView.swift; sourceTree = "<group>"; };
+		A7437CF72BCC772500D5183C /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +164,8 @@
 			children = (
 				A7437CAB2BCA971D00D5183C /* HomeView.swift */,
 				A7437CE12BCC54E600D5183C /* HomeItemCardView.swift */,
+				A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */,
+				A7437CF72BCC772500D5183C /* StatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +210,7 @@
 		A7437CAA2BCA970A00D5183C /* ViewSetlist */ = {
 			isa = PBXGroup;
 			children = (
+				A7437CE92BCC6F1700D5183C /* Views */,
 			);
 			path = ViewSetlist;
 			sourceTree = "<group>";
@@ -212,6 +227,7 @@
 		A7437CB32BCA9C3400D5183C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A7437CEE2BCC733B00D5183C /* Other */,
 				A7437CCE2BCC49CD00D5183C /* Containers */,
 				A7437CC62BCBEA2900D5183C /* TabBar */,
 				A7437CC32BCBE7B100D5183C /* Buttons */,
@@ -253,6 +269,7 @@
 			children = (
 				A7437CC42BCBE7BF00D5183C /* BigCircleIconButton.swift */,
 				A7437CD12BCC4B6300D5183C /* WideCapsuleButton.swift */,
+				A7437CF12BCC742800D5183C /* SmallRectangleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -299,6 +316,23 @@
 				A7437CDF2BCC537800D5183C /* Instrument.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A7437CE92BCC6F1700D5183C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CEC2BCC6F3400D5183C /* SetlistDetailsView.swift */,
+				A7437CF32BCC75F100D5183C /* SongCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7437CEE2BCC733B00D5183C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CEF2BCC734700D5183C /* SectionTitle.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,18 +417,24 @@
 				A7437CBE2BCBC99900D5183C /* HomeSideMenuRowType.swift in Sources */,
 				A7437C932BCA94CF00D5183C /* StageKeeperApp.swift in Sources */,
 				A7437CB52BCA9C4400D5183C /* SideMenuView.swift in Sources */,
+				A7437CF82BCC772500D5183C /* StatView.swift in Sources */,
 				A7437CE42BCC563A00D5183C /* String.swift in Sources */,
+				A7437CF42BCC75F100D5183C /* SongCardView.swift in Sources */,
+				A7437CED2BCC6F3400D5183C /* SetlistDetailsView.swift in Sources */,
 				A7437CD02BCC49D800D5183C /* BorderDiagonalShadowContainer.swift in Sources */,
 				A7437CC02BCBCC0300D5183C /* SideMenuRowView.swift in Sources */,
+				A7437CF22BCC742800D5183C /* SmallRectangleButton.swift in Sources */,
 				A7437CCA2BCBEA4700D5183C /* TabBarViewButton.swift in Sources */,
 				A7437CB72BCBC07600D5183C /* AppBar.swift in Sources */,
 				A7437CBB2BCBC4A700D5183C /* AppBarIconButtonView.swift in Sources */,
 				A7437CE62BCC568900D5183C /* Int.swift in Sources */,
 				A7437CC82BCBEA3800D5183C /* TabBarView.swift in Sources */,
 				A7437CD42BCC512A00D5183C /* SetlistsViewModel.swift in Sources */,
+				A7437CF02BCC734700D5183C /* SectionTitle.swift in Sources */,
 				A7437CE82BCC640700D5183C /* SongsViewModel.swift in Sources */,
 				A7437CDE2BCC536D00D5183C /* SongEnergy.swift in Sources */,
 				A7437CC22BCBD4EF00D5183C /* HomeSideMenuView.swift in Sources */,
+				A7437CF62BCC767300D5183C /* InstrumentLettersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
