@@ -10,15 +10,17 @@ import SwiftUI
 struct AppBarIconButtonView: View {
     var action: () -> Void
     var icon: String
-    let size: CGFloat = 32
+    let buttonSize: CGFloat = 36
+    let iconSize: CGFloat = 20
     var body: some View {
         Button(action: action, label: {
             ZStack{
                 Circle()
-                    .frame(width: size, height: size)
+                    .frame(width: buttonSize, height: buttonSize)
                     .foregroundStyle(.yellow)
                 Image(systemName: icon)
                     .foregroundStyle(.black)
+                    .font(.system(size: iconSize))
             }
         }
         )
@@ -27,11 +29,13 @@ struct AppBarIconButtonView: View {
 
 #Preview {
     VStack {
-        AppBar(title: "Stage Keeper", leading: {
+        AppBar(title: "Stage Keeper", leading: [
+            AppBarIconButtonView(action: {}, icon: "info"),
             AppBarIconButtonView(action: {}, icon: "info")
-        }, trailing: {
+            
+        ], trailing: [
             AppBarIconButtonView(action: {}, icon: "info")
-        })
+        ])
         Spacer()
     }
     .padding()

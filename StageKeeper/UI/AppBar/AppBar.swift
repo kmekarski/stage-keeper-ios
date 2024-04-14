@@ -7,34 +7,60 @@
 
 import SwiftUI
 
-struct AppBar<LeadingContent: View, TrailingContent: View>: View {
+struct AppBar: View {
     var title: String?
     var logo: Image?
-    @ViewBuilder let leading: LeadingContent
-    @ViewBuilder let trailing: TrailingContent
+    let leading: [AppBarIconButtonView]
+    let trailing: [AppBarIconButtonView]
+    
+    let titleFontSize: CGFloat = 24
+    
+    init(title: String? = nil, logo: Image? = nil, leading: [AppBarIconButtonView] = [], trailing: [AppBarIconButtonView] = []) {
+        self.title = title
+        self.logo = logo
+        self.leading = leading
+        self.trailing = trailing
+    }
+    
     var body: some View {
-        HStack {
-            leading
-            Spacer()
-            if let title = title {
-                           Text(title)
-                       } else if let logo = logo {
-                           logo.resizable().scaledToFit().frame(height: 30)
-                       }
-            Spacer()
-            trailing
+        ZStack {
+            HStack {
+                HStack(spacing: 8) {
+                    ForEach(leading.indices, id: \.self) { index in
+                        leading[index]
+                    }
+                }
+                Spacer()
+                HStack(spacing: 8) {
+                    ForEach(trailing.indices, id: \.self) { index in
+                        trailing[index]
+                    }
+                }
+            }
+            HStack {
+                if let title = title {
+                    Text(title).font(.system(size: titleFontSize))
+                } else if let logo = logo {
+                    logo.resizable().scaledToFit().frame(height: 30)
+                }
+            }
         }
+        .frame(height: 50)
     }
 }
 
 #Preview {
     VStack{
-        AppBar(title: "Stage Keeper", leading: {
+        AppBar(title: "Stage Keeper", leading: [
             AppBarIconButtonView(action: {}, icon: "info")
-        }, trailing: {
+        ], trailing: [
+            AppBarIconButtonView(action: {}, icon: "info"),
             AppBarIconButtonView(action: {}, icon: "info")
-        })
-        Spacer()
+        ])
+        AppBar(title: "Stage Keeper", leading: [
+            AppBarIconButtonView(action: {}, icon: "info")
+        ])
+        AppBar(title: "Stage Keeper")
     }
     .padding()
 }

@@ -33,14 +33,10 @@ struct HomeView: View {
 
 extension HomeView {
     private var appBar: some View {
-        AppBar(title: "Stage Keeper", leading: {
+        AppBar(title: "Stage Keeper", leading: [
             AppBarIconButtonView(action: {
                 showSideMenu.toggle()
-            }, icon: "info")
-        }, trailing: {
-            AppBarIconButtonView(action: {
-                showSideMenu.toggle()
-            }, icon: "info")
-        })
+            }, icon: "line.3.horizontal")
+        ])
     }
 }
