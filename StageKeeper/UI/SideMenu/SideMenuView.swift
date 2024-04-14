@@ -12,6 +12,8 @@ struct SideMenuView: View {
     @Binding var selectedSideMenuTab: Int
     var menuItems: [SideMenuRowView]
     
+    let menuWidth: CGFloat = 300
+    
     var edgeTransition: AnyTransition = .move(edge: .leading)
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -25,16 +27,19 @@ struct SideMenuView: View {
                 HStack {
                     ZStack {
                         Rectangle()
-                            .fill(.white)
-                        VStack(alignment: .leading, spacing: 0) {
+                            .fill(Color(.systemGray5))
+                        VStack(alignment: .leading, spacing: 16) {
                             ForEach(0..<menuItems.count, id: \.self) { index in
                                 menuItems[index]
                             }
                             Spacer()
+                            SideMenuRowView(title: "Sign Out", icon: "info", isSelected: false, action: {})
                         }
+                        .padding(20)
                         .padding(.top, 100)
+                        .padding(.bottom, 32)
                     }
-                    .frame(width: 270)
+                    .frame(width: menuWidth)
                     Spacer()
                 }
                 .background(.clear)
@@ -48,4 +53,8 @@ struct SideMenuView: View {
         .ignoresSafeArea()
         .animation(.easeInOut, value: isShowing)
     }
+}
+
+#Preview {
+    HomeSideMenuView(isShowing: .constant(true), selectedSideMenuTab: .constant(0))
 }

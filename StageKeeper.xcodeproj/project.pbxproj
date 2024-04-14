@@ -17,6 +17,12 @@
 		A7437CBE2BCBC99900D5183C /* HomeSideMenuRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CBD2BCBC99900D5183C /* HomeSideMenuRowType.swift */; };
 		A7437CC02BCBCC0300D5183C /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CBF2BCBCC0300D5183C /* SideMenuRowView.swift */; };
 		A7437CC22BCBD4EF00D5183C /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CC12BCBD4EF00D5183C /* HomeSideMenuView.swift */; };
+		A7437CC52BCBE7BF00D5183C /* BigCircleIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CC42BCBE7BF00D5183C /* BigCircleIconButton.swift */; };
+		A7437CC82BCBEA3800D5183C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CC72BCBEA3800D5183C /* TabBarView.swift */; };
+		A7437CCA2BCBEA4700D5183C /* TabBarViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CC92BCBEA4700D5183C /* TabBarViewButton.swift */; };
+		A7437CCD2BCBF3C300D5183C /* HomeTabBarOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CCC2BCBF3C300D5183C /* HomeTabBarOptionType.swift */; };
+		A7437CD02BCC49D800D5183C /* WideCapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CCF2BCC49D800D5183C /* WideCapsuleView.swift */; };
+		A7437CD22BCC4B6300D5183C /* WideCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CD12BCC4B6300D5183C /* WideCapsuleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		A7437CBD2BCBC99900D5183C /* HomeSideMenuRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuRowType.swift; sourceTree = "<group>"; };
 		A7437CBF2BCBCC0300D5183C /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		A7437CC12BCBD4EF00D5183C /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
+		A7437CC42BCBE7BF00D5183C /* BigCircleIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCircleIconButton.swift; sourceTree = "<group>"; };
+		A7437CC72BCBEA3800D5183C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A7437CC92BCBEA4700D5183C /* TabBarViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewButton.swift; sourceTree = "<group>"; };
+		A7437CCC2BCBF3C300D5183C /* HomeTabBarOptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarOptionType.swift; sourceTree = "<group>"; };
+		A7437CCF2BCC49D800D5183C /* WideCapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideCapsuleView.swift; sourceTree = "<group>"; };
+		A7437CD12BCC4B6300D5183C /* WideCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideCapsuleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		A7437CA22BCA96B300D5183C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A7437CCB2BCBF3B600D5183C /* TabBar */,
 				A7437CBC2BCBC98700D5183C /* HomeSideMenu */,
 				A7437CA42BCA96BA00D5183C /* ViewModels */,
 				A7437CA32BCA96B700D5183C /* Views */,
@@ -172,6 +185,9 @@
 		A7437CB32BCA9C3400D5183C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A7437CCE2BCC49CD00D5183C /* Containers */,
+				A7437CC62BCBEA2900D5183C /* TabBar */,
+				A7437CC32BCBE7B100D5183C /* Buttons */,
 				A7437CB92BCBC44200D5183C /* SideMenu */,
 				A7437CB82BCBC43900D5183C /* AppBar */,
 			);
@@ -203,6 +219,40 @@
 				A7437CC12BCBD4EF00D5183C /* HomeSideMenuView.swift */,
 			);
 			path = HomeSideMenu;
+			sourceTree = "<group>";
+		};
+		A7437CC32BCBE7B100D5183C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CC42BCBE7BF00D5183C /* BigCircleIconButton.swift */,
+				A7437CD12BCC4B6300D5183C /* WideCapsuleButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A7437CC62BCBEA2900D5183C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CC72BCBEA3800D5183C /* TabBarView.swift */,
+				A7437CC92BCBEA4700D5183C /* TabBarViewButton.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A7437CCB2BCBF3B600D5183C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CCC2BCBF3C300D5183C /* HomeTabBarOptionType.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A7437CCE2BCC49CD00D5183C /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				A7437CCF2BCC49D800D5183C /* WideCapsuleView.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,13 +325,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7437CD22BCC4B6300D5183C /* WideCapsuleButton.swift in Sources */,
 				A7437CAC2BCA971D00D5183C /* HomeView.swift in Sources */,
+				A7437CCD2BCBF3C300D5183C /* HomeTabBarOptionType.swift in Sources */,
+				A7437CC52BCBE7BF00D5183C /* BigCircleIconButton.swift in Sources */,
 				A7437CBE2BCBC99900D5183C /* HomeSideMenuRowType.swift in Sources */,
 				A7437C932BCA94CF00D5183C /* StageKeeperApp.swift in Sources */,
 				A7437CB52BCA9C4400D5183C /* SideMenuView.swift in Sources */,
+				A7437CD02BCC49D800D5183C /* WideCapsuleView.swift in Sources */,
 				A7437CC02BCBCC0300D5183C /* SideMenuRowView.swift in Sources */,
+				A7437CCA2BCBEA4700D5183C /* TabBarViewButton.swift in Sources */,
 				A7437CB72BCBC07600D5183C /* AppBar.swift in Sources */,
 				A7437CBB2BCBC4A700D5183C /* AppBarIconButtonView.swift in Sources */,
+				A7437CC82BCBEA3800D5183C /* TabBarView.swift in Sources */,
 				A7437CC22BCBD4EF00D5183C /* HomeSideMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,26 +12,9 @@ struct SideMenuRowView: View {
     var icon: String
     var isSelected: Bool
     var action: () -> Void
-    let iconSize: CGFloat = 16
     
     var body: some View {
-        Button{
-            action()
-        } label: {
-            HStack(spacing: 20){
-                Image(systemName: icon)
-                    .resizable()
-                    .frame(width: iconSize, height: iconSize)
-                    .foregroundColor(.black)
-                Text(title)
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(.black)
-                Spacer()
-            }
-            .padding(.leading)
-            .padding(20)
-        }
-        .background(isSelected ? Color.yellow : Color.clear)
+        WideCapsuleButton(text: title, icon: icon, action: action, alignment: .leading, backgroundColor: isSelected ? .yellow : .white)
     }
 }
 

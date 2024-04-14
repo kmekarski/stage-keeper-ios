@@ -39,7 +39,7 @@ struct AppBar: View {
             }
             HStack {
                 if let title = title {
-                    Text(title).font(.system(size: titleFontSize))
+                    Text(title).font(.system(size: titleFontSize, weight: .semibold))
                 } else if let logo = logo {
                     logo.resizable().scaledToFit().frame(height: 30)
                 }

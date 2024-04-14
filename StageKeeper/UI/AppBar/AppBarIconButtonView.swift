@@ -16,11 +16,14 @@ struct AppBarIconButtonView: View {
         Button(action: action, label: {
             ZStack{
                 Circle()
+                    .frame(width: buttonSize+4, height: buttonSize+4)
+                    .foregroundStyle(.black)
+                Circle()
                     .frame(width: buttonSize, height: buttonSize)
                     .foregroundStyle(.yellow)
                 Image(systemName: icon)
                     .foregroundStyle(.black)
-                    .font(.system(size: iconSize))
+                    .font(.system(size: iconSize, weight: .semibold))
             }
         }
         )
