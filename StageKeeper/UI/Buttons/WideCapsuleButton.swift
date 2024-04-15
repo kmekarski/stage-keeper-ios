@@ -16,21 +16,11 @@ struct WideCapsuleButton: View {
     let circleSize: CGFloat = 22
     let iconSize: CGFloat = 16
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: action, label: {
             BorderDiagonalShadowContainer(alignment: alignment, backgroundColor: backgroundColor, content: {
                 HStack(spacing: 12) {
                     if let icon = icon {
-                        ZStack {
-                            Circle()
-                                .foregroundStyle(.black)
-                                .frame(width: circleSize+3, height: circleSize+3)
-                            Circle()
-                                .foregroundStyle(.white)
-                                .frame(width: circleSize, height: circleSize)
-                            
-                            Image(systemName: icon)
-                                .font(.system(size: iconSize, weight: .semibold))
-                        }
+                        IconCircle(icon: icon, size: .small)
                     }
                     Text(text)
                 }

@@ -69,7 +69,10 @@ extension HomeView {
                     }
                 case .songs:
                     ForEach(songsVM.songs) {song in
-                        HomeItemCardView(song: song)
+                        NavigationLink {
+                            SongDetailsView(song: song)
+                        } label: { HomeItemCardView(song: song)
+                        }
                     }
                 }
             

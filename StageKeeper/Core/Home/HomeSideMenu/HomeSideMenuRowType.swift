@@ -26,6 +26,19 @@ enum HomeSideMenuRowType: Int, CaseIterable{
         }
     }
     
+    var description: String{
+        switch self {
+        case .home:
+            return "Your setlists and songs"
+        case .bandmates:
+            return "Manage your band"
+        case .about:
+            return "Read stuff about the app"
+        case .profile:
+            return "Edit your profile details"
+        }
+    }
+    
     var iconName: String{
         switch self {
         case .home:

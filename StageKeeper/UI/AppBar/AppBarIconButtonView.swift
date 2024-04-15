@@ -14,17 +14,7 @@ struct AppBarIconButtonView: View {
     let iconSize: CGFloat = 20
     var body: some View {
         Button(action: action, label: {
-            ZStack{
-                Circle()
-                    .frame(width: buttonSize+4, height: buttonSize+4)
-                    .foregroundStyle(.black)
-                Circle()
-                    .frame(width: buttonSize, height: buttonSize)
-                    .foregroundStyle(.yellow)
-                Image(systemName: icon)
-                    .foregroundStyle(.black)
-                    .font(.system(size: iconSize, weight: .semibold))
-            }
+            IconCircle(icon: icon, size: .big, backgroundColor: .yellow)
         }
         )
     }

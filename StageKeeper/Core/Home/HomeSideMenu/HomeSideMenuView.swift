@@ -22,7 +22,7 @@ struct HomeSideMenuView: View {
 extension HomeSideMenuView {
     private var menuItems: [SideMenuRowView] {
         HomeSideMenuRowType.allCases.enumerated().map { (index, row) in
-            SideMenuRowView(title: row.title, icon: row.iconName, isSelected: selectedSideMenuTab == index, action: {
+            SideMenuRowView(title: row.title, description: row.description,icon: row.iconName, isSelected: selectedSideMenuTab == index, action: {
                 selectedSideMenuTab = index
                 isShowing.toggle()
             })

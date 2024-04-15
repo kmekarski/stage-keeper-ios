@@ -13,7 +13,6 @@
 		A7437CAC2BCA971D00D5183C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CAB2BCA971D00D5183C /* HomeView.swift */; };
 		A7437CB52BCA9C4400D5183C /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CB42BCA9C4400D5183C /* SideMenuView.swift */; };
 		A7437CB72BCBC07600D5183C /* AppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CB62BCBC07600D5183C /* AppBar.swift */; };
-		A7437CBB2BCBC4A700D5183C /* AppBarIconButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CBA2BCBC4A700D5183C /* AppBarIconButtonView.swift */; };
 		A7437CBE2BCBC99900D5183C /* HomeSideMenuRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CBD2BCBC99900D5183C /* HomeSideMenuRowType.swift */; };
 		A7437CC02BCBCC0300D5183C /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CBF2BCBCC0300D5183C /* SideMenuRowView.swift */; };
 		A7437CC22BCBD4EF00D5183C /* HomeSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CC12BCBD4EF00D5183C /* HomeSideMenuView.swift */; };
@@ -40,6 +39,8 @@
 		A7437CF62BCC767300D5183C /* InstrumentLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */; };
 		A7437CF82BCC772500D5183C /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CF72BCC772500D5183C /* StatView.swift */; };
 		A7437CFD2BCC807C00D5183C /* SongDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437CFC2BCC807C00D5183C /* SongDetailsView.swift */; };
+		A7437D012BCD110400D5183C /* IconCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437D002BCD110400D5183C /* IconCircle.swift */; };
+		A7437D032BCD15E900D5183C /* AppBarIconButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7437D022BCD15E900D5183C /* AppBarIconButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,6 @@
 		A7437CAB2BCA971D00D5183C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A7437CB42BCA9C4400D5183C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		A7437CB62BCBC07600D5183C /* AppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBar.swift; sourceTree = "<group>"; };
-		A7437CBA2BCBC4A700D5183C /* AppBarIconButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarIconButtonView.swift; sourceTree = "<group>"; };
 		A7437CBD2BCBC99900D5183C /* HomeSideMenuRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuRowType.swift; sourceTree = "<group>"; };
 		A7437CBF2BCBCC0300D5183C /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		A7437CC12BCBD4EF00D5183C /* HomeSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideMenuView.swift; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		A7437CF52BCC767300D5183C /* InstrumentLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentLettersView.swift; sourceTree = "<group>"; };
 		A7437CF72BCC772500D5183C /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		A7437CFC2BCC807C00D5183C /* SongDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsView.swift; sourceTree = "<group>"; };
+		A7437D002BCD110400D5183C /* IconCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCircle.swift; sourceTree = "<group>"; };
+		A7437D022BCD15E900D5183C /* AppBarIconButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarIconButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				A7437CB62BCBC07600D5183C /* AppBar.swift */,
-				A7437CBA2BCBC4A700D5183C /* AppBarIconButtonView.swift */,
+				A7437D022BCD15E900D5183C /* AppBarIconButtonView.swift */,
 			);
 			path = AppBar;
 			sourceTree = "<group>";
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				A7437CEF2BCC734700D5183C /* SectionTitle.swift */,
+				A7437D002BCD110400D5183C /* IconCircle.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -430,10 +433,12 @@
 				A7437CDA2BCC534D00D5183C /* Setlist.swift in Sources */,
 				A7437CE22BCC54E600D5183C /* HomeItemCardView.swift in Sources */,
 				A7437CAC2BCA971D00D5183C /* HomeView.swift in Sources */,
+				A7437D012BCD110400D5183C /* IconCircle.swift in Sources */,
 				A7437CD72BCC532A00D5183C /* MockSetlists.swift in Sources */,
 				A7437CCD2BCBF3C300D5183C /* HomeTabBarOptionType.swift in Sources */,
 				A7437CC52BCBE7BF00D5183C /* BigCircleIconButton.swift in Sources */,
 				A7437CBE2BCBC99900D5183C /* HomeSideMenuRowType.swift in Sources */,
+				A7437D032BCD15E900D5183C /* AppBarIconButtonView.swift in Sources */,
 				A7437C932BCA94CF00D5183C /* StageKeeperApp.swift in Sources */,
 				A7437CB52BCA9C4400D5183C /* SideMenuView.swift in Sources */,
 				A7437CF82BCC772500D5183C /* StatView.swift in Sources */,
@@ -445,7 +450,6 @@
 				A7437CF22BCC742800D5183C /* SmallRectangleButton.swift in Sources */,
 				A7437CCA2BCBEA4700D5183C /* TabBarViewButton.swift in Sources */,
 				A7437CB72BCBC07600D5183C /* AppBar.swift in Sources */,
-				A7437CBB2BCBC4A700D5183C /* AppBarIconButtonView.swift in Sources */,
 				A7437CE62BCC568900D5183C /* Int.swift in Sources */,
 				A7437CC82BCBEA3800D5183C /* TabBarView.swift in Sources */,
 				A7437CD42BCC512A00D5183C /* SetlistsViewModel.swift in Sources */,
